@@ -36,4 +36,4 @@ A convinience script that runs all the tests and create friendly junit reports h
 python3 testAll.py.py
 ```
 
-[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow%20%40bukotsunikki)](https://twitter.com/BikoNyamai)
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow%20%40bikxs)](https://twitter.com/BikoNyamai)
