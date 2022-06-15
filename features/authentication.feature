@@ -1,4 +1,5 @@
 Feature: Authentication
+  Authentication and Status Codes
 
   Scenario: Valid Token Authentication
     Given we are not authenticated

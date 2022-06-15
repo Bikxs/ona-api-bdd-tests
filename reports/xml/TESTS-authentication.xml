@@ -1,0 +1,45 @@
+<testsuite name="authentication.Authentication" tests="4" errors="0" failures="0" skipped="0" time="2.581178" timestamp="2022-06-15T10:10:36.353735" hostname="1321555L"><testcase classname="authentication.Authentication" name="Valid Token Authentication" status="passed" time="0.683586"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Valid Token Authentication
+    Given we are not authenticated ... passed in 0.000s
+    When we authenticate using a valid key ... passed in 0.684s
+    Then we shall received a 200 status code ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="authentication.Authentication" name="Valid Basic Authentication" status="passed" time="0.688626"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Valid Basic Authentication
+    Given we are not authenticated ... passed in 0.000s
+    When we authenticate using a valid username/password ... passed in 0.689s
+    Then we shall received a 200 status code ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="authentication.Authentication" name="Invalid Token Authentication" status="passed" time="0.527055"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Invalid Token Authentication
+    Given we are not authenticated ... passed in 0.000s
+    When we authenticate using an invalid key ... passed in 0.527s
+    Then we shall received a 401 status code ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="authentication.Authentication" name="Invalid Basic Authentication" status="passed" time="0.681911"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Invalid Basic Authentication
+    Given we are not authenticated ... passed in 0.000s
+    When we authenticate using a bad username/password ... passed in 0.682s
+    Then we shall received a 401 status code ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

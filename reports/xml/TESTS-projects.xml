@@ -1,0 +1,24 @@
+<testsuite name="projects.Projects" tests="1" errors="1" failures="0" skipped="0" time="0.0" timestamp="2022-06-15T10:10:36.353735" hostname="1321555L"><testcase classname="projects.Projects" name="List of Projects" status="failed" time="0.0"><error type="NotImplementedError" message="STEP: When we request a list of projects">
+<![CDATA[
+Failing step: When we request a list of projects ... failed in 0.000s
+Location: features/projects.feature:6
+Traceback (most recent call last):
+  File "C:\Users\1321555\.conda\envs\ona\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "C:\Users\1321555\.conda\envs\ona\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\projects.py", line 7, in step_impl
+    raise NotImplementedError(u'STEP: When we request a list of projects')
+NotImplementedError: STEP: When we request a list of projects
+]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: List of Projects
+    When we request a list of projects ... failed in 0.000s
+    Then we get the list of projects we defined back ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
