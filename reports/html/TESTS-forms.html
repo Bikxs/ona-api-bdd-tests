@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TESTS-projects.xml</title>
+    <title>TESTS-forms.xml</title>
     <style type="text/css">
         body {
     background-color: white;
@@ -201,7 +201,7 @@ h1 {
 <body>
     
 <h1>
-    Test Report : TESTS-projects.xml
+    Test Report : TESTS-forms.xml
 </h1>
 <a id="toc"></a>
 <table class="index-table">
@@ -210,14 +210,14 @@ h1 {
             <ul class="toc">
             
                 
-                <li>projects.Projects
+                <li>forms.Forms
                 <ul>
                     
-                    <li><a href="#5cdf98b1-f927-48de-bdb9-bb8419aa08cf">List of Projects</a></li>
+                    <li><a href="#afb7beee-9283-4ea3-ae88-893f4bc3889c">Get list of forms on test project</a></li>
                     
-                    <li><a href="#efc4ddbb-eb26-4546-8bcf-606e11ba3760">Retrieve Project Information</a></li>
+                    <li><a href="#3184498c-e7f0-46fa-af94-1740c4c7b744">Get Form Information</a></li>
                     
-                    <li><a href="#b9711406-c25b-4af9-b6b5-f39d8a3e4924">Update Project Information</a></li>
+                    <li><a href="#fca236fb-228b-4f0a-be62-7d23ea50ff0d">Set Form Information</a></li>
                     
                 </ul>
                 </li>
@@ -245,14 +245,14 @@ h1 {
 
 
     <div class="testsuite">
-        <h2>Test Suite: projects.Projects</h2>
-        <a id="6a45a1a1-e790-4b80-8802-1703a1d2f0bb"></a>
+        <h2>Test Suite: forms.Forms</h2>
+        <a id="04ee3b1b-e540-4d78-9d70-3122720f3558"></a>
         
         
         <h3>Results</h3>
         <table class="proplist">
             <tr>
-                <th>Duration</th><td>2.608 sec</td>
+                <th>Duration</th><td>3.16 sec</td>
             </tr>
             <tr>
                 <th>Tests</th><td>3</td>
@@ -266,15 +266,15 @@ h1 {
             <h3>Tests</h3>
             
             <div class="testclass">
-                <h4>projects.Projects</h4>
+                <h4>forms.Forms</h4>
                 <div class="testcases">
                 
                     <div class="test outcome outcome-passed">
-                        <a id="5cdf98b1-f927-48de-bdb9-bb8419aa08cf"></a>
+                        <a id="afb7beee-9283-4ea3-ae88-893f4bc3889c"></a>
                         <table class="proplist">
-                            <tr><th>Test case:</th><td><b>List of Projects</b></td></tr>
+                            <tr><th>Test case:</th><td><b>Get list of forms on test project</b></td></tr>
                             <tr><th>Outcome:</th><td>Passed</td></tr>
-                            <tr><th>Duration:</th><td>0.542 sec</td></tr>
+                            <tr><th>Duration:</th><td>0.716 sec</td></tr>
                         
                             <tr><th>Failed</th><td>None</td></tr>
                         
@@ -292,10 +292,11 @@ h1 {
                             <pre>
 
 @scenario.begin
-  Scenario: List of Projects
-    Given we authenticate using a valid key ... passed in 0.000s
-    When we request a list of projects ... passed in 0.541s
-    Then we get the list of projects with test project included ... passed in 0.001s
+  Scenario: Get list of forms on test project
+    Given we authenticate using a valid key ... passed in 0.001s
+    When we request a list of test project forms ... passed in 0.713s
+    Then we get a list of project forms ... passed in 0.001s
+    And the test form id should be included in the list ... passed in 0.001s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -307,11 +308,11 @@ h1 {
                     </div>
                 
                     <div class="test outcome outcome-passed">
-                        <a id="efc4ddbb-eb26-4546-8bcf-606e11ba3760"></a>
+                        <a id="3184498c-e7f0-46fa-af94-1740c4c7b744"></a>
                         <table class="proplist">
-                            <tr><th>Test case:</th><td><b>Retrieve Project Information</b></td></tr>
+                            <tr><th>Test case:</th><td><b>Get Form Information</b></td></tr>
                             <tr><th>Outcome:</th><td>Passed</td></tr>
-                            <tr><th>Duration:</th><td>0.551 sec</td></tr>
+                            <tr><th>Duration:</th><td>0.582 sec</td></tr>
                         
                             <tr><th>Failed</th><td>None</td></tr>
                         
@@ -329,10 +330,10 @@ h1 {
                             <pre>
 
 @scenario.begin
-  Scenario: Retrieve Project Information
+  Scenario: Get Form Information
     Given we authenticate using a valid key ... passed in 0.000s
-    When we request for the test project ... passed in 0.550s
-    Then we get the test project back ... passed in 0.001s
+    When we request a infomation of test form ... passed in 0.581s
+    Then we should get infomation about the test form ... passed in 0.001s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -344,11 +345,11 @@ h1 {
                     </div>
                 
                     <div class="test outcome outcome-passed">
-                        <a id="b9711406-c25b-4af9-b6b5-f39d8a3e4924"></a>
+                        <a id="fca236fb-228b-4f0a-be62-7d23ea50ff0d"></a>
                         <table class="proplist">
-                            <tr><th>Test case:</th><td><b>Update Project Information</b></td></tr>
+                            <tr><th>Test case:</th><td><b>Set Form Information</b></td></tr>
                             <tr><th>Outcome:</th><td>Passed</td></tr>
-                            <tr><th>Duration:</th><td>1.514 sec</td></tr>
+                            <tr><th>Duration:</th><td>1.862 sec</td></tr>
                         
                             <tr><th>Failed</th><td>None</td></tr>
                         
@@ -366,44 +367,82 @@ h1 {
                             <pre>
 
 @scenario.begin
-  Scenario: Update Project Information
-    Given we authenticate using a valid key ... passed in 0.000s
-    When we change the test project name ... passed in 0.518s
-    Then we get test project with new name ... passed in 0.996s
+  Scenario: Set Form Information
+    Given we authenticate using a valid key ... passed in 0.001s
+    When we change information of test form ... passed in 0.714s
+    Then we should get updated infomation about the test form ... passed in 1.147s
 
 @scenario.end
 --------------------------------------------------------------------------------
 
 Captured stdout:
-Test Project
-{&#39;created_by&#39;: &#39;https://api.ona.io/api/v1/users/bikxs&#39;,
+Test Form (#2092)
+Test Form (#2092)
+Test form
+{&#39;allows_sms&#39;: False,
+ &#39;bamboo_dataset&#39;: &#39;&#39;,
+ &#39;created_by&#39;: &#39;https://api.ona.io/api/v1/users/bikxs&#39;,
  &#39;data_views&#39;: [],
- &#39;date_created&#39;: &#39;2022-06-15T06:34:56.686511-04:00&#39;,
- &#39;date_modified&#39;: &#39;2022-06-15T09:59:56.484015-04:00&#39;,
- &#39;deleted_at&#39;: None,
- &#39;forms&#39;: [{&#39;date_created&#39;: &#39;2022-06-15T09:01:35.745295-04:00&#39;,
-            &#39;downloadable&#39;: True,
-            &#39;encrypted&#39;: False,
-            &#39;formid&#39;: 677556,
-            &#39;id_string&#39;: &#39;ANC_Visit&#39;,
-            &#39;is_merged_dataset&#39;: False,
-            &#39;last_submission_time&#39;: None,
-            &#39;last_updated_at&#39;: &#39;2022-06-15T09:59:53.872201-04:00&#39;,
-            &#39;name&#39;: &#39;Test Form&#39;,
-            &#39;num_of_submissions&#39;: 0,
-            &#39;published_by_formbuilder&#39;: None,
-            &#39;url&#39;: &#39;https://api.ona.io/api/v1/forms/677556&#39;}],
- &#39;last_submission_date&#39;: None,
- &#39;metadata&#39;: {&#39;category&#39;: &#39;baselinesurvey&#39;},
- &#39;name&#39;: &#39;Testing Project&#39;,
- &#39;num_datasets&#39;: 1,
+ &#39;date_created&#39;: &#39;2022-06-15T09:01:35.745295-04:00&#39;,
+ &#39;date_modified&#39;: &#39;2022-06-15T09:59:53.872189-04:00&#39;,
+ &#39;description&#39;: &#39;&#39;,
+ &#39;downloadable&#39;: True,
+ &#39;encrypted&#39;: False,
+ &#39;enketo_preview_url&#39;: &#39;https://enketo.ona.io/preview/DW9iDKTX&#39;,
+ &#39;enketo_single_submit_url&#39;: &#39;https://enketo.ona.io/x/DW9iDKTX&#39;,
+ &#39;enketo_url&#39;: &#39;https://enketo.ona.io/x/DW9iDKTX&#39;,
+ &#39;form_versions&#39;: [],
+ &#39;formid&#39;: 677556,
+ &#39;has_hxl_support&#39;: False,
+ &#39;hash&#39;: &#39;md5:6dd21c690fbe80bb5c558fd7f65bf2d8&#39;,
+ &#39;id_string&#39;: &#39;ANC_Visit&#39;,
+ &#39;instances_with_geopoints&#39;: False,
+ &#39;instances_with_osm&#39;: False,
+ &#39;is_merged_dataset&#39;: False,
+ &#39;last_submission_time&#39;: None,
+ &#39;last_updated_at&#39;: &#39;2022-06-15T09:59:53.872201-04:00&#39;,
+ &#39;metadata&#39;: [{&#39;data_file&#39;: None,
+               &#39;data_file_type&#39;: None,
+               &#39;data_type&#39;: &#39;enketo_preview_url&#39;,
+               &#39;data_value&#39;: &#39;https://enketo.ona.io/preview/DW9iDKTX&#39;,
+               &#39;date_created&#39;: &#39;2022-06-15T13:01:36.099325Z&#39;,
+               &#39;file_hash&#39;: None,
+               &#39;id&#39;: 8728007,
+               &#39;media_url&#39;: None,
+               &#39;url&#39;: &#39;https://api.ona.io/api/v1/metadata/8728007&#39;,
+               &#39;xform&#39;: 677556},
+              {&#39;data_file&#39;: None,
+               &#39;data_file_type&#39;: None,
+               &#39;data_type&#39;: &#39;enketo_single_submit_url&#39;,
+               &#39;data_value&#39;: &#39;https://enketo.ona.io/single/DW9iDKTX&#39;,
+               &#39;date_created&#39;: &#39;2022-06-15T13:01:36.117363Z&#39;,
+               &#39;file_hash&#39;: None,
+               &#39;id&#39;: 8728008,
+               &#39;media_url&#39;: None,
+               &#39;url&#39;: &#39;https://api.ona.io/api/v1/metadata/8728008&#39;,
+               &#39;xform&#39;: 677556},
+              {&#39;data_file&#39;: None,
+               &#39;data_file_type&#39;: None,
+               &#39;data_type&#39;: &#39;enketo_url&#39;,
+               &#39;data_value&#39;: &#39;https://enketo.ona.io/x/DW9iDKTX&#39;,
+               &#39;date_created&#39;: &#39;2022-06-15T13:01:36.073894Z&#39;,
+               &#39;file_hash&#39;: None,
+               &#39;id&#39;: 8728006,
+               &#39;media_url&#39;: None,
+               &#39;url&#39;: &#39;https://api.ona.io/api/v1/metadata/8728006&#39;,
+               &#39;xform&#39;: 677556}],
+ &#39;num_of_submissions&#39;: 0,
  &#39;owner&#39;: &#39;https://api.ona.io/api/v1/users/bikxs&#39;,
- &#39;projectid&#39;: 186930,
+ &#39;project&#39;: &#39;https://api.ona.io/api/v1/projects/186930&#39;,
  &#39;public&#39;: False,
- &#39;starred&#39;: False,
+ &#39;public_data&#39;: False,
+ &#39;public_key&#39;: &#39;&#39;,
+ &#39;require_auth&#39;: False,
+ &#39;sms_id_string&#39;: &#39;ANC_Visit&#39;,
+ &#39;submission_count_for_today&#39;: 0,
  &#39;tags&#39;: [],
- &#39;teams&#39;: [],
- &#39;url&#39;: &#39;https://api.ona.io/api/v1/projects/186930&#39;,
+ &#39;title&#39;: &#39;Test Form&#39;,
+ &#39;url&#39;: &#39;https://api.ona.io/api/v1/forms/677556&#39;,
  &#39;users&#39;: [{&#39;first_name&#39;: &#39;Stephen&#39;,
             &#39;is_org&#39;: False,
             &#39;last_name&#39;: &#39;Nyamai&#39;,
@@ -421,7 +460,10 @@ Test Project
                                    &#39;tos-pp&#39;: {&#39;2018-03-30&#39;: {&#39;accepted&#39;: True,
                                                              &#39;date&#39;: &#39;2022-06-14T13:00:40.011Z&#39;}}}},
             &#39;role&#39;: &#39;owner&#39;,
-            &#39;user&#39;: &#39;bikxs&#39;}]}
+            &#39;user&#39;: &#39;bikxs&#39;}],
+ &#39;uuid&#39;: &#39;37bcec84dfb241bfa9beb45fd9197a50&#39;,
+ &#39;version&#39;: &#39;202206151301&#39;,
+ &#39;xls_available&#39;: True}
 
 
 </pre>

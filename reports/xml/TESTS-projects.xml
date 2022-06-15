@@ -1,24 +1,84 @@
-<testsuite name="projects.Projects" tests="1" errors="1" failures="0" skipped="0" time="0.0" timestamp="2022-06-15T10:10:36.353735" hostname="1321555L"><testcase classname="projects.Projects" name="List of Projects" status="failed" time="0.0"><error type="NotImplementedError" message="STEP: When we request a list of projects">
-<![CDATA[
-Failing step: When we request a list of projects ... failed in 0.000s
-Location: features/projects.feature:6
-Traceback (most recent call last):
-  File "C:\Users\1321555\.conda\envs\ona\lib\site-packages\behave\model.py", line 1329, in run
-    match.run(runner.context)
-  File "C:\Users\1321555\.conda\envs\ona\lib\site-packages\behave\matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-  File "features\steps\projects.py", line 7, in step_impl
-    raise NotImplementedError(u'STEP: When we request a list of projects')
-NotImplementedError: STEP: When we request a list of projects
-]]>
-</error><system-out>
+<testsuite name="projects.Projects" tests="3" errors="0" failures="0" skipped="0" time="2.607715" timestamp="2022-06-15T16:59:56.269729" hostname="Hades"><testcase classname="projects.Projects" name="List of Projects" status="passed" time="0.542268"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: List of Projects
-    When we request a list of projects ... failed in 0.000s
-    Then we get the list of projects we defined back ... skipped in 0.000s
+    Given we authenticate using a valid key ... passed in 0.000s
+    When we request a list of projects ... passed in 0.541s
+    Then we get the list of projects with test project included ... passed in 0.001s
 
 @scenario.end
 --------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="projects.Projects" name="Retrieve Project Information" status="passed" time="0.55127"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Retrieve Project Information
+    Given we authenticate using a valid key ... passed in 0.000s
+    When we request for the test project ... passed in 0.550s
+    Then we get the test project back ... passed in 0.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="projects.Projects" name="Update Project Information" status="passed" time="1.514177"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Update Project Information
+    Given we authenticate using a valid key ... passed in 0.000s
+    When we change the test project name ... passed in 0.518s
+    Then we get test project with new name ... passed in 0.996s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Test Project
+{'created_by': 'https://api.ona.io/api/v1/users/bikxs',
+ 'data_views': [],
+ 'date_created': '2022-06-15T06:34:56.686511-04:00',
+ 'date_modified': '2022-06-15T09:59:56.484015-04:00',
+ 'deleted_at': None,
+ 'forms': [{'date_created': '2022-06-15T09:01:35.745295-04:00',
+            'downloadable': True,
+            'encrypted': False,
+            'formid': 677556,
+            'id_string': 'ANC_Visit',
+            'is_merged_dataset': False,
+            'last_submission_time': None,
+            'last_updated_at': '2022-06-15T09:59:53.872201-04:00',
+            'name': 'Test Form',
+            'num_of_submissions': 0,
+            'published_by_formbuilder': None,
+            'url': 'https://api.ona.io/api/v1/forms/677556'}],
+ 'last_submission_date': None,
+ 'metadata': {'category': 'baselinesurvey'},
+ 'name': 'Testing Project',
+ 'num_datasets': 1,
+ 'owner': 'https://api.ona.io/api/v1/users/bikxs',
+ 'projectid': 186930,
+ 'public': False,
+ 'starred': False,
+ 'tags': [],
+ 'teams': [],
+ 'url': 'https://api.ona.io/api/v1/projects/186930',
+ 'users': [{'first_name': 'Stephen',
+            'is_org': False,
+            'last_name': 'Nyamai',
+            'metadata': {'is_email_verified': False,
+                         'last_password_edit': '2022-06-14T13:00:39.602549+00:00',
+                         'zebra': {'dataview-beta?': True,
+                                   'eu-citizen-consent': {'date': '2022-06-14T13:01:19.458Z',
+                                                          'eu-citizen-data': False},
+                                   'first-login': True,
+                                   'hide-beta-features-walkthrough?': True,
+                                   'hide-data-view-walkthrough?': True,
+                                   'hide-dataview-beta-tag-walkthrough?': True,
+                                   'hide-home-walkthrough?': True,
+                                   'hide-project-view-walkthrough?': True,
+                                   'tos-pp': {'2018-03-30': {'accepted': True,
+                                                             'date': '2022-06-14T13:00:40.011Z'}}}},
+            'role': 'owner',
+            'user': 'bikxs'}]}
+
 ]]>
 </system-out></testcase></testsuite>

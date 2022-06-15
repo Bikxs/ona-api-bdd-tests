@@ -1,0 +1,126 @@
+<testsuite name="forms.Forms" tests="3" errors="0" failures="0" skipped="0" time="3.15968" timestamp="2022-06-15T16:59:53.652989" hostname="Hades"><testcase classname="forms.Forms" name="Get list of forms on test project" status="passed" time="0.71558"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Get list of forms on test project
+    Given we authenticate using a valid key ... passed in 0.001s
+    When we request a list of test project forms ... passed in 0.713s
+    Then we get a list of project forms ... passed in 0.001s
+    And the test form id should be included in the list ... passed in 0.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="forms.Forms" name="Get Form Information" status="passed" time="0.581668"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Get Form Information
+    Given we authenticate using a valid key ... passed in 0.000s
+    When we request a infomation of test form ... passed in 0.581s
+    Then we should get infomation about the test form ... passed in 0.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="forms.Forms" name="Set Form Information" status="passed" time="1.862431"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Set Form Information
+    Given we authenticate using a valid key ... passed in 0.001s
+    When we change information of test form ... passed in 0.714s
+    Then we should get updated infomation about the test form ... passed in 1.147s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Test Form (#2092)
+Test Form (#2092)
+Test form
+{'allows_sms': False,
+ 'bamboo_dataset': '',
+ 'created_by': 'https://api.ona.io/api/v1/users/bikxs',
+ 'data_views': [],
+ 'date_created': '2022-06-15T09:01:35.745295-04:00',
+ 'date_modified': '2022-06-15T09:59:53.872189-04:00',
+ 'description': '',
+ 'downloadable': True,
+ 'encrypted': False,
+ 'enketo_preview_url': 'https://enketo.ona.io/preview/DW9iDKTX',
+ 'enketo_single_submit_url': 'https://enketo.ona.io/x/DW9iDKTX',
+ 'enketo_url': 'https://enketo.ona.io/x/DW9iDKTX',
+ 'form_versions': [],
+ 'formid': 677556,
+ 'has_hxl_support': False,
+ 'hash': 'md5:6dd21c690fbe80bb5c558fd7f65bf2d8',
+ 'id_string': 'ANC_Visit',
+ 'instances_with_geopoints': False,
+ 'instances_with_osm': False,
+ 'is_merged_dataset': False,
+ 'last_submission_time': None,
+ 'last_updated_at': '2022-06-15T09:59:53.872201-04:00',
+ 'metadata': [{'data_file': None,
+               'data_file_type': None,
+               'data_type': 'enketo_preview_url',
+               'data_value': 'https://enketo.ona.io/preview/DW9iDKTX',
+               'date_created': '2022-06-15T13:01:36.099325Z',
+               'file_hash': None,
+               'id': 8728007,
+               'media_url': None,
+               'url': 'https://api.ona.io/api/v1/metadata/8728007',
+               'xform': 677556},
+              {'data_file': None,
+               'data_file_type': None,
+               'data_type': 'enketo_single_submit_url',
+               'data_value': 'https://enketo.ona.io/single/DW9iDKTX',
+               'date_created': '2022-06-15T13:01:36.117363Z',
+               'file_hash': None,
+               'id': 8728008,
+               'media_url': None,
+               'url': 'https://api.ona.io/api/v1/metadata/8728008',
+               'xform': 677556},
+              {'data_file': None,
+               'data_file_type': None,
+               'data_type': 'enketo_url',
+               'data_value': 'https://enketo.ona.io/x/DW9iDKTX',
+               'date_created': '2022-06-15T13:01:36.073894Z',
+               'file_hash': None,
+               'id': 8728006,
+               'media_url': None,
+               'url': 'https://api.ona.io/api/v1/metadata/8728006',
+               'xform': 677556}],
+ 'num_of_submissions': 0,
+ 'owner': 'https://api.ona.io/api/v1/users/bikxs',
+ 'project': 'https://api.ona.io/api/v1/projects/186930',
+ 'public': False,
+ 'public_data': False,
+ 'public_key': '',
+ 'require_auth': False,
+ 'sms_id_string': 'ANC_Visit',
+ 'submission_count_for_today': 0,
+ 'tags': [],
+ 'title': 'Test Form',
+ 'url': 'https://api.ona.io/api/v1/forms/677556',
+ 'users': [{'first_name': 'Stephen',
+            'is_org': False,
+            'last_name': 'Nyamai',
+            'metadata': {'is_email_verified': False,
+                         'last_password_edit': '2022-06-14T13:00:39.602549+00:00',
+                         'zebra': {'dataview-beta?': True,
+                                   'eu-citizen-consent': {'date': '2022-06-14T13:01:19.458Z',
+                                                          'eu-citizen-data': False},
+                                   'first-login': True,
+                                   'hide-beta-features-walkthrough?': True,
+                                   'hide-data-view-walkthrough?': True,
+                                   'hide-dataview-beta-tag-walkthrough?': True,
+                                   'hide-home-walkthrough?': True,
+                                   'hide-project-view-walkthrough?': True,
+                                   'tos-pp': {'2018-03-30': {'accepted': True,
+                                                             'date': '2022-06-14T13:00:40.011Z'}}}},
+            'role': 'owner',
+            'user': 'bikxs'}],
+ 'uuid': '37bcec84dfb241bfa9beb45fd9197a50',
+ 'version': '202206151301',
+ 'xls_available': True}
+
+]]>
+</system-out></testcase></testsuite>

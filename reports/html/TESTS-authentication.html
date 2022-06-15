@@ -213,13 +213,15 @@ h1 {
                 <li>authentication.Authentication
                 <ul>
                     
-                    <li><a href="#a62ec8df-81f3-4474-b7ce-a3a03fce13fe">Valid Token Authentication</a></li>
+                    <li><a href="#3c34a28d-1024-4df9-9357-bdcf656486c8">No authentication</a></li>
                     
-                    <li><a href="#ba10bd14-ad22-40af-880f-7bb7811b1960">Valid Basic Authentication</a></li>
+                    <li><a href="#c7ff60bf-392c-4c58-8be0-3045a844a4a1">Valid Token Authentication</a></li>
                     
-                    <li><a href="#056a50e7-0358-40da-8194-c025f343ff82">Invalid Token Authentication</a></li>
+                    <li><a href="#bdfedaf4-ef9e-4262-9fed-5777b84dc1aa">Valid Basic Authentication</a></li>
                     
-                    <li><a href="#b8e93d22-4c0f-4be6-9199-04fd5b8dbe31">Invalid Basic Authentication</a></li>
+                    <li><a href="#c344dc9a-c30d-4ff7-8d0d-ba3b50f04e8e">Invalid Token Authentication</a></li>
+                    
+                    <li><a href="#05d2521d-42d7-432a-9db4-815c3d01bbfe">Invalid Basic Authentication</a></li>
                     
                 </ul>
                 </li>
@@ -240,6 +242,8 @@ h1 {
                     
                     
                     
+                    
+                    
                 
             
             </ul>
@@ -250,16 +254,16 @@ h1 {
 
     <div class="testsuite">
         <h2>Test Suite: authentication.Authentication</h2>
-        <a id="b8e0e133-d247-4e0b-9697-4419c2e50f5f"></a>
+        <a id="f6c8afcb-018a-4b6f-8933-1ca591b029b4"></a>
         
         
         <h3>Results</h3>
         <table class="proplist">
             <tr>
-                <th>Duration</th><td>2.581 sec</td>
+                <th>Duration</th><td>3.115 sec</td>
             </tr>
             <tr>
-                <th>Tests</th><td>4</td>
+                <th>Tests</th><td>5</td>
             </tr>
             <tr>
                 <th>Failures</th><td>0</td>
@@ -274,11 +278,49 @@ h1 {
                 <div class="testcases">
                 
                     <div class="test outcome outcome-passed">
-                        <a id="a62ec8df-81f3-4474-b7ce-a3a03fce13fe"></a>
+                        <a id="3c34a28d-1024-4df9-9357-bdcf656486c8"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>No authentication</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.57 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario: No authentication
+    Given we are not authenticated ... passed in 0.000s
+    When we request our list of projects ... passed in 0.569s
+    Then we shall received a 200 status code ... passed in 0.000s
+    And the project list will be empty ... passed in 0.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c7ff60bf-392c-4c58-8be0-3045a844a4a1"></a>
                         <table class="proplist">
                             <tr><th>Test case:</th><td><b>Valid Token Authentication</b></td></tr>
                             <tr><th>Outcome:</th><td>Passed</td></tr>
-                            <tr><th>Duration:</th><td>0.684 sec</td></tr>
+                            <tr><th>Duration:</th><td>0.543 sec</td></tr>
                         
                             <tr><th>Failed</th><td>None</td></tr>
                         
@@ -297,9 +339,10 @@ h1 {
 
 @scenario.begin
   Scenario: Valid Token Authentication
-    Given we are not authenticated ... passed in 0.000s
-    When we authenticate using a valid key ... passed in 0.684s
+    Given we authenticate using a valid key ... passed in 0.001s
+    When we request our list of projects ... passed in 0.542s
     Then we shall received a 200 status code ... passed in 0.000s
+    And the project list will not be empty ... passed in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -311,9 +354,84 @@ h1 {
                     </div>
                 
                     <div class="test outcome outcome-passed">
-                        <a id="ba10bd14-ad22-40af-880f-7bb7811b1960"></a>
+                        <a id="bdfedaf4-ef9e-4262-9fed-5777b84dc1aa"></a>
                         <table class="proplist">
                             <tr><th>Test case:</th><td><b>Valid Basic Authentication</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.868 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario: Valid Basic Authentication
+    Given we authenticate using a valid username/password ... passed in 0.000s
+    When we request our list of projects ... passed in 0.868s
+    Then we shall received a 200 status code ... passed in 0.000s
+    And the project list will not be empty ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c344dc9a-c30d-4ff7-8d0d-ba3b50f04e8e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Invalid Token Authentication</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.445 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>
+
+@scenario.begin
+  Scenario: Invalid Token Authentication
+    Given we authenticate using an invalid key ... passed in 0.000s
+    When we request our list of projects ... passed in 0.445s
+    Then we shall received a 401 status code ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="05d2521d-42d7-432a-9db4-815c3d01bbfe"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Invalid Basic Authentication</b></td></tr>
                             <tr><th>Outcome:</th><td>Passed</td></tr>
                             <tr><th>Duration:</th><td>0.689 sec</td></tr>
                         
@@ -333,83 +451,9 @@ h1 {
                             <pre>
 
 @scenario.begin
-  Scenario: Valid Basic Authentication
-    Given we are not authenticated ... passed in 0.000s
-    When we authenticate using a valid username/password ... passed in 0.689s
-    Then we shall received a 200 status code ... passed in 0.000s
-
-@scenario.end
---------------------------------------------------------------------------------
-
-</pre>
-                        </div>
-                        
-                        
-                    </div>
-                
-                    <div class="test outcome outcome-passed">
-                        <a id="056a50e7-0358-40da-8194-c025f343ff82"></a>
-                        <table class="proplist">
-                            <tr><th>Test case:</th><td><b>Invalid Token Authentication</b></td></tr>
-                            <tr><th>Outcome:</th><td>Passed</td></tr>
-                            <tr><th>Duration:</th><td>0.527 sec</td></tr>
-                        
-                            <tr><th>Failed</th><td>None</td></tr>
-                        
-                        
-                        </table>
-
-                        
-                        <pre>None</pre>
-                        
-                        
-
-                        
-                        
-                        <div class="stdout"><i>Stdout</i><br>
-                            <pre>
-
-@scenario.begin
-  Scenario: Invalid Token Authentication
-    Given we are not authenticated ... passed in 0.000s
-    When we authenticate using an invalid key ... passed in 0.527s
-    Then we shall received a 401 status code ... passed in 0.000s
-
-@scenario.end
---------------------------------------------------------------------------------
-
-</pre>
-                        </div>
-                        
-                        
-                    </div>
-                
-                    <div class="test outcome outcome-passed">
-                        <a id="b8e93d22-4c0f-4be6-9199-04fd5b8dbe31"></a>
-                        <table class="proplist">
-                            <tr><th>Test case:</th><td><b>Invalid Basic Authentication</b></td></tr>
-                            <tr><th>Outcome:</th><td>Passed</td></tr>
-                            <tr><th>Duration:</th><td>0.682 sec</td></tr>
-                        
-                            <tr><th>Failed</th><td>None</td></tr>
-                        
-                        
-                        </table>
-
-                        
-                        <pre>None</pre>
-                        
-                        
-
-                        
-                        
-                        <div class="stdout"><i>Stdout</i><br>
-                            <pre>
-
-@scenario.begin
   Scenario: Invalid Basic Authentication
-    Given we are not authenticated ... passed in 0.000s
-    When we authenticate using a bad username/password ... passed in 0.682s
+    Given we authenticate using a bad username/password ... passed in 0.000s
+    When we request our list of projects ... passed in 0.689s
     Then we shall received a 401 status code ... passed in 0.000s
 
 @scenario.end
